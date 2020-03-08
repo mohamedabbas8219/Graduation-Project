@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/RFormStyle.css" rel="stylesheet" type="text/css"/>
+  <link href="css/RTableStyle.css" rel="stylesheet" type="text/css"/>
+	 <meta charset="utf-8">
+  <title></title>
+	
+  <script>
+        function v(){
+     
+          var group_crs2=document.getElementById("sel2").options;
+     var count_group_crs2=document.getElementById("sel2").options.length;
+        
+        var group_crs=document.getElementById("sel1").options;
+     var count_group_crs=document.getElementById("sel1").options.length;
+     for(var i=0;i<count_group_crs;i++)
+     { 
+         for(var j=0;j<count_group_crs2;j++)
+         {
+          if(group_crs[i].text===group_crs2[j].text)
+          {
+              // the_all_select.remove(1);
+              document.getElementById("sel1").options[i].disabled=true; ;
+          }
+       }
+     }
+    }
+  
+  
+  
+  </script>
+  
+</head>
+<body onpageshow="v()">
+
+<div class="header">
+</div>
+    
+<center>
+	<table id="myTable">
+  <tr >
+    <th>السادسة</th>
+    <th>الخامسة</th>
+    <th>الرابعة</th>
+    <th>الثالثة</th>
+    <th>الثانيه</th>
+    <th>الأولى</th>
+    <th>الفترات</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <th>السبت</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td  data-toggle="modal" data-target="#myModal" class="active"></td>
+     <td></td>
+     <td></td>
+     <th>الأحد</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <th>الاتنين</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <th>الثلاثاء</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <th>الاربعاء</th>
+  </tr>
+  <tr>
+     <td></td> 
+     <td></td> 
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <th>الخميس</th>
+  </tr>
+  <tr>
+</table>
+</center>
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog">
+     <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header" style="height:10px;">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+         </div>
+        <div class="modal-body" >
+         <!-- ///////////////////////////////////////////////////-->
+        <form class="login">
+       <h3 class="text-center" style="color:#4d58c7;">قم باختيار الكورس</h3>
+       <br>
+        <center>
+           <div class="select_c">
+        
+          <select class="form-control" id="sel2">
+             <option selected disabled="disabled" value="" selected>كورسات الفرقة الرابعة ع ح </option>
+             <option>التعرف علي الانماط</option>
+             <option>c1</option>
+          </select> 
+        </div>
+        <div class="select_c">
+        
+          <select class="form-control" id="sel1">
+             <option selected disabled="disabled" value="" selected>كورسات الفرقة الرابعة ع ح </option>
+             <option>التعرف علي الانماط</option>
+             <option>c1</option>
+              <option>c2</option>
+               <option>c1</option>
+                <option>c2</option>
+          </select> 
+        </div>
+        <br>
+        <br>
+        <button  data-dismiss="modal" class="btn">&nbsp; حفظ &nbsp;</button>
+        &nbsp;
+        <button  data-dismiss="modal" class="btn">&nbsp; الغاء &nbsp;</button>
+        <br>
+        <br>
+        <br>
+        
+        </center>
+
+    
+       </form>
+       </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="footer" style="background-color: #7e9def; color:white; height: 100px">
+  <center> 
+  <br><br>@2017 Lecture Schedule - FCI Mansora University<br>
+  </center>
+</div>
+
+</body>
+</html>

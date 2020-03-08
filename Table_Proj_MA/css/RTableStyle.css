@@ -1,0 +1,69 @@
+
+
+#myTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    height: 800px;
+    font-weight: bold;
+    
+    /*border: 2px #8aa5ec solid;
+     border-radius:10px;
+     border-radius: 10px 40px 40px 10px;
+    border-width: 10px 4px;
+   border-radius: 10px 40px;*/
+    
+    border: groove .5em #8aa5ec;  
+  border-radius: 40em;
+    
+    
+}
+
+#myTable td, #myTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+}
+
+#myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.lec_table td:hover {background-color: #ddd;}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #8aa5ec;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 10%;
+    height: 80px;
+}
+.td1{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+    background-color: #8aa5ec;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 10%;
+    height: 70px;
+}
+.btn{
+  background-color: #008dde;
+  color: white;
+  width: 160px;
+}
+
+.active{
+  background-color: #8aa5ec;
+  color: white;
+}
+#activecell:hover {
+  background-color: white;  /*#8aa5ec;*/
+  color:blue ;
+}
+
+

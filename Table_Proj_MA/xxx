@@ -1,0 +1,38 @@
+
+
+ function function current_cell_group($conn,$stand,$day,$lec)
+  {
+  $groupsid_sql="SELECT S_group FROM showtables where stand='$stand' and day=$day and lec=$lec";   
+ $groupsid_q=mysqli_query($conn,$groupsid_sql);
+ $groupsid_f= mysqli_fetch_all($groupsid_q,MYSQLI_NUM);
+  $current_cell_group=$groupsid_f[0][0];
+   return $current_cell_group;
+ }
+  $current_cell_group=current_cell_group($conn,$stand,$day,$lec);
+ 
+
+
+
+
+ function current_cell_courses($conn,$current_cell_group)
+ {
+  $crss_ids_sql="SELECT crs_id FROM courses_groups where s_group=$current_cell_group)";   
+ $crss_ids_q=mysqli_query($conn,$crss_ids_sql);
+ $crss_ids_f= mysqli_fetch_all($crss_ids_q,MYSQLI_NUM);
+     
+ //count of groups
+ $crss_count_sql="SELECT count(crs_id) FROM courses_groups where s_group=$current_cell_group)";   
+$crss_count_q=mysqli_query($conn,$crss_count_sql);
+ $crss_count_f=mysqli_fetch_all($crss_count_q,MYSQLI_NUM);
+ $crss_count=$crss_count_f[0][0];
+
+  $crss_ids=array();
+  for($i=0,$ii=$crss_count;$i<$ii;$i++)
+  {
+     $crss_ids[$i]=$crss_ids_f[$i][0];
+   }
+ sort( $crss_ids);
+  }
+
+current_cell_courses=current_cell_courses($conn,$current_cell_group);
+

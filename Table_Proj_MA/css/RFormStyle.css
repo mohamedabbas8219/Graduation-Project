@@ -1,0 +1,30 @@
+/*body*/
+body{
+	background-color:#F4F4F4; 
+}
+
+
+
+/*login form*/
+.login{
+	width: 400px;
+	margin: 100px auto;
+}
+.login input{
+	margin-bottom: 10px;
+       
+}
+.login .form-control{
+
+}
+.login .btn{
+	background-color: #008dde;
+	/*font-size: 17px;*/
+}
+.login h2{
+	color:#63abd4;
+}
+#selected_table
+{
+  color:white;background-color: #0062ff; font-size: 1.2em;
+}
